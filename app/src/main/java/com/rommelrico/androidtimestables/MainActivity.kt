@@ -2,12 +2,24 @@ package com.rommelrico.androidtimestables
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.SeekBar
 
 class MainActivity : AppCompatActivity() {
 
     var timesTablesListView: ListView? = null
+
+    fun generateTimesTable(timesTableNumber: Int) {
+        val timesTableContent = arrayListOf<String>()
+
+        for (j in 1..100) {
+            timesTableContent.add(Integer.toString(j * timesTableNumber))
+        }
+
+        val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, timesTableContent)
+        timesTablesListView.adapter = arrayAdapter
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
