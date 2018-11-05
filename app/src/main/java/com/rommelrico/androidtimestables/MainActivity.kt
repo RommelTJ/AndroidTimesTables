@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
              */
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 val min = 1
-                var timesTableNumber = 0
+                var timesTableNumber: Int
 
                 if (progress < min) {
                     timesTableNumber = min
