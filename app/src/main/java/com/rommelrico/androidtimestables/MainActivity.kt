@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         timesTablesListView = findViewById(R.id.timesTablesListView)
 
         // Some arbitrary values.
-        val max = 20
         val startingPosition = 10
 
         // Generate the Times Tables.
