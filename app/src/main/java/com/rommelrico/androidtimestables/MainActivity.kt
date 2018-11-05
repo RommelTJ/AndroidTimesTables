@@ -36,7 +36,9 @@ class MainActivity : AppCompatActivity() {
         // Generate the Times Tables.
         generateTimesTable(startingPosition)
 
+        // Changing the contents based on the values from the SeekBar.
         timesTablesSeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+
             /**
              * Notification that the progress level has changed. Clients can use the fromUser parameter
              * to distinguish user-initiated changes from those that occurred programmatically.
@@ -49,7 +51,17 @@ class MainActivity : AppCompatActivity() {
              * @param fromUser True if the progress change was initiated by the user.
              */
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                val min = 1
+                var timesTableNumber = 0
+
+                if (progress < min) {
+                    timesTableNumber = min
+                    timesTablesSeekBar.progress = min
+                } else {
+                    timesTableNumber = progress
+                }
+
+                generateTimesTable(timesTableNumber)
             }
 
             /**
