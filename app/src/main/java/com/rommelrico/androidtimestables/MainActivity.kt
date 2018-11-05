@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         val max = 20
         val startingPosition = 10
 
-        // TODO: Generate Times Tables.
+        // Generate the Times Tables.
+        generateTimesTable(startingPosition)
 
         timesTablesSeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
             /**
