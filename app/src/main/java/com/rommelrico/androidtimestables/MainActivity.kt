@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, timesTableContent)
-        timesTablesListView.adapter = arrayAdapter
+        timesTablesListView?.adapter = arrayAdapter
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
