@@ -17,5 +17,9 @@ class MainActivity : AppCompatActivity() {
         val timesTablesSeekBar = findViewById<SeekBar>(R.id.timesTablesSeekBar)
         timesTablesListView = findViewById(R.id.timesTablesListView)
 
+        // Some arbitrary values.
+        val max = 20
+        val startingPosition = 10
+
     }
 }
